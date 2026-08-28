@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Theo Lipsky</title>
+<style>
+  :root {
+    --bg: #132821;
+    --text: #f1ede2;
+    --muted: #9db8ab;
+    --accent: #d6a75a;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  main {
+    max-width: 620px;
+    margin: 0 auto;
+    padding: 6rem 1.5rem 5rem;
+  }
+
+  h1 {
+    font-size: 1.9rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    margin: 0 0 3.5rem;
+  }
+
+  @media (max-width: 480px) {
+    main {
+      padding: 3.5rem 1.25rem 3rem;
+    }
+
+    h1 {
+      font-size: 1.6rem;
+      margin-bottom: 2.5rem;
+    }
+
+    section {
+      margin-bottom: 2.25rem;
+    }
+  }
+
+  h2 {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--muted);
+    font-weight: 500;
+    margin: 0 0 1.1rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+  }
+
+  section {
+    margin-bottom: 3rem;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    margin-bottom: 1.05rem;
+  }
+
+  li:last-child {
+    margin-bottom: 0;
+  }
+
+  a {
+    color: var(--text);
+    text-decoration: none;
+    background-image: linear-gradient(var(--accent), var(--accent));
+    background-size: 0% 1px;
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    transition: background-size 0.25s ease, color 0.25s ease;
+    padding-bottom: 1px;
+  }
+
+  a:hover, a:focus {
+    color: var(--accent);
+    background-size: 100% 1px;
+  }
+
+  .venue {
+    color: var(--muted);
+    font-size: 0.85rem;
+    font-style: italic;
+  }
+
+  footer {
+    margin-top: 4rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid color-mix(in srgb, var(--muted) 25%, transparent);
+    font-size: 0.85rem;
+    color: var(--muted);
+  }
+
+  footer a {
+    color: var(--muted);
+  }
+
+  footer a:hover {
+    color: var(--accent);
+  }
+</style>
+</head>
+<body>
+<main>
+  <h1>Theo Lipsky</h1>
+
+  <section>
+    <h2>Essays and Commentary</h2>
+    <ul>
+      <li><a href="/fear-and-trembling-in-the-garrison/">Fear and Trembling in the Garrison</a> <span class="venue">— The Point</span></li>
+      <li><a href="/tolstoys-complaint/">Tolstoy's Complaint</a> <span class="venue">— Modern War Institute</span></li>
+      <li><a href="/unit-status-reports/">Unit Status Reports</a> <span class="venue">— Military Review</span></li>
+      <li><a href="/a-clearer-mirror/">A Clearer Mirror</a> <span class="venue">— Modern War Institute</span></li>
+      <li><a href="/the-burden-of-command/">The Burden of Command</a> <span class="venue">— Modern War Institute</span></li>
+      <li><a href="/the-lessons-ian-fishback-taught-us/">The Lessons Ian Fishback Taught Us</a> <span class="venue">— Modern War Institute</span></li>
+      <li><a href="/to-learn-the-armys-ethic/">To Learn the Army's Ethic, Officers Should Study the Army's History</a> <span class="venue">— War on the Rocks</span></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Reviews</h2>
+    <ul>
+      <li><a href="/wouk-backlash/">Wouk Backlash</a> <span class="venue">— Metropolitan Review</span></li>
+      <li><a href="/absurd-harvest/">Absurd Harvest</a> <span class="venue">— Metropolitan Review</span></li>
+    </ul>
+  </section>
+
+  <footer>
+    &copy; <span id="year"></span> Theo Lipsky
+  </footer>
+</main>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
